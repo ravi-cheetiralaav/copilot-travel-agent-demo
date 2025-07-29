@@ -44,3 +44,4 @@ This is a Next.js-based travel application with TypeScript that helps users sear
 3. Follow Next.js best practices for data fetching, routing, and rendering
 4. Use proper error handling and loading states
 5. Optimize components and pages for performance
+6. Custom Info : https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions
