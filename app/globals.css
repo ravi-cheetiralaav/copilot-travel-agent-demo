@@ -6,6 +6,35 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Default theme (Blue) */
+  :root,
+  [data-theme="default"] {
+    --theme-primary-50: #eff6ff;
+    --theme-primary-100: #dbeafe;
+    --theme-primary-500: #3b82f6;
+    --theme-primary-600: #2563eb;
+    --theme-primary-700: #1d4ed8;
+    --theme-secondary-50: #f0fdf4;
+    --theme-secondary-100: #dcfce7;
+    --theme-secondary-500: #22c55e;
+    --theme-secondary-600: #16a34a;
+    --theme-secondary-700: #15803d;
+  }
+
+  /* Orange theme */
+  [data-theme="orange"] {
+    --theme-primary-50: #fff7ed;
+    --theme-primary-100: #ffedd5;
+    --theme-primary-500: #f97316;
+    --theme-primary-600: #ea580c;
+    --theme-primary-700: #c2410c;
+    --theme-secondary-50: #fef3c7;
+    --theme-secondary-100: #fde68a;
+    --theme-secondary-500: #f59e0b;
+    --theme-secondary-600: #d97706;
+    --theme-secondary-700: #b45309;
+  }
 }
 
 @layer utilities {
@@ -21,5 +50,10 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  /* Theme transition utilities */
+  .theme-transition {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   }
 }
