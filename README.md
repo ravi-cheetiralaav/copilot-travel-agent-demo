@@ -46,6 +46,46 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
+## Docker Support
+
+### Quick Start with Docker
+
+Run the application using Docker Compose:
+
+```bash
+# Build and run production version
+docker-compose up --build
+
+# Run development version with hot-reloading
+docker-compose --profile dev up --build travel-app-dev
+```
+
+### Manual Docker Commands
+
+```bash
+# Build the Docker image
+docker build -t travel-app .
+
+# Run the container
+docker run -p 3000:3000 travel-app
+
+# For development with hot-reloading
+docker build -f Dockerfile.dev -t travel-app-dev .
+docker run -p 3000:3000 -v $(pwd):/app -v /app/node_modules travel-app-dev
+```
+
+### GitHub Package Registry
+
+The application is automatically built and pushed to GitHub Package Registry on:
+- Push to `main` or `develop` branches
+- Tagged releases
+- Pull requests to `main`
+
+Pull the latest image:
+```bash
+docker pull ghcr.io/ravi-cheetiralaav/copilot-agent-demo:main
+```
+
 ## Development Scripts
 
 - `npm run dev` - Start development server
