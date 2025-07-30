@@ -12,7 +12,8 @@ export const mockTrips: Trip[] = [
     rating: 4.8,
     category: 'cultural',
     availableDates: ['2024-03-15', '2024-04-20', '2024-05-18'],
-    included: ['Flights', 'Hotel', 'City Tour', 'Traditional Dinner']
+    included: ['Flights', 'Hotel', 'City Tour', 'Traditional Dinner'],
+    country: 'Japan'
   },
   {
     id: '2',
@@ -25,7 +26,8 @@ export const mockTrips: Trip[] = [
     rating: 4.6,
     category: 'relaxation',
     availableDates: ['2024-02-10', '2024-03-25', '2024-04-15'],
-    included: ['Flights', 'Resort Stay', 'Spa Treatment', 'Beach Activities']
+    included: ['Flights', 'Resort Stay', 'Spa Treatment', 'Beach Activities'],
+    country: 'Indonesia'
   },
   {
     id: '3',
@@ -38,7 +40,8 @@ export const mockTrips: Trip[] = [
     rating: 4.9,
     category: 'adventure',
     availableDates: ['2024-01-20', '2024-02-28', '2024-12-15'],
-    included: ['Flights', 'Mountain Lodge', 'Ski Pass', 'Guided Tours']
+    included: ['Flights', 'Mountain Lodge', 'Ski Pass', 'Guided Tours'],
+    country: 'Switzerland'
   },
   {
     id: '4',
@@ -51,7 +54,8 @@ export const mockTrips: Trip[] = [
     rating: 4.7,
     category: 'family',
     availableDates: ['2024-04-10', '2024-05-22', '2024-06-30'],
-    included: ['Flights', 'Family Hotel', 'Museum Passes', 'Seine River Cruise']
+    included: ['Flights', 'Family Hotel', 'Museum Passes', 'Seine River Cruise'],
+    country: 'France'
   },
   {
     id: '5',
@@ -64,7 +68,8 @@ export const mockTrips: Trip[] = [
     rating: 5.0,
     category: 'luxury',
     availableDates: ['2024-03-01', '2024-04-05', '2024-11-15'],
-    included: ['Flights', 'Overwater Villa', 'All Meals', 'Private Butler', 'Spa Credits']
+    included: ['Flights', 'Overwater Villa', 'All Meals', 'Private Butler', 'Spa Credits'],
+    country: 'Maldives'
   }
 ];
 

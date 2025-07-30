@@ -11,6 +11,10 @@ export class TripService {
       );
     }
 
+    if (filters.country) {
+      filteredTrips = filteredTrips.filter(trip => trip.country === filters.country);
+    }
+
     if (filters.category) {
       filteredTrips = filteredTrips.filter(trip => trip.category === filters.category);
     }

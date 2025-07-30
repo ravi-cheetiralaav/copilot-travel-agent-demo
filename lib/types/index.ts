@@ -2,6 +2,7 @@ export interface Trip {
   id: string;
   title: string;
   destination: string;
+  country: string;
   description: string;
   price: number;
   duration: number; // in days
@@ -46,9 +47,18 @@ export interface User {
   bookings: Booking[];
 }
 
+export interface DateRange {
+  start: Date;
+  end: Date;
+}
+
 export interface SearchFilters {
   destination?: string;
-  category?: Trip['category'];
+  country?: string;
+  category?: 'adventure' | 'relaxation' | 'cultural' | 'family' | 'luxury';
+  rating?: number;
+  dates?: DateRange;
+  guests?: number;
   priceRange?: {
     min?: number;
     max?: number;
@@ -57,5 +67,4 @@ export interface SearchFilters {
     min?: number;
     max?: number;
   };
-  rating?: number;
 }

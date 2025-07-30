@@ -84,6 +84,25 @@ export function SearchForm({ onSearch, loading = false }: SearchFormProps) {
           </Select>
         </div>
 
+        {/* Country */}
+        <div>
+          <label htmlFor="country" className="block text-sm font-medium text-gray-700 mb-1">
+            Country
+          </label>
+          <Select
+            id="country"
+            value={filters.country || ''}
+            onChange={(e) => handleInputChange('country', e.target.value)}
+          >
+            <option value="">All Countries</option>
+            <option value="Japan">Japan</option>
+            <option value="Indonesia">Indonesia</option>
+            <option value="Switzerland">Switzerland</option>
+            <option value="France">France</option>
+            <option value="Maldives">Maldives</option>
+          </Select>
+        </div>
+
         {/* Rating */}
         <div>
           <label htmlFor="rating" className="block text-sm font-medium text-gray-700 mb-1">
