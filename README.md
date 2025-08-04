@@ -8,6 +8,7 @@ A comprehensive travel application built with Next.js, TypeScript, and Tailwind 
 - **Travel Guides**: Expert tips and local insights for destinations
 - **Booking Management**: View and manage your travel bookings
 - **Loyalty Points System**: Earn and track points with every booking
+- **Support Center**: Comprehensive help system with FAQ, contact forms, and support information
 - **Responsive Design**: Mobile-first design that works on all devices
 - **Modern UI**: Clean, accessible interface built with Tailwind CSS
 
@@ -105,6 +106,10 @@ app/                    # Next.js App Router pages and layouts
 ├── guides/            # Travel guides pages
 ├── bookings/          # Booking management pages
 ├── points/            # Loyalty points page
+├── support/           # Support center pages
+│   ├── page.tsx       # Support landing page
+│   ├── faq/           # FAQ page
+│   └── contact/       # Contact form page
 └── globals.css        # Global styles
 
 components/             # Reusable React components
@@ -113,6 +118,10 @@ components/             # Reusable React components
 ├── trips/             # Trip-specific components
 ├── guides/            # Guide-specific components
 ├── bookings/          # Booking-specific components
+├── support/           # Support-specific components
+│   ├── FAQSection.tsx # FAQ accordion component
+│   ├── ContactForm.tsx# Contact form component
+│   └── ContactInfo.tsx# Contact information component
 └── __tests__/         # Component tests
 
 lib/                   # Core logic and services
@@ -147,6 +156,13 @@ tests/                 # Test files and test utilities
 - Membership tiers: Bronze, Silver, Gold, Platinum
 - Progress tracking and benefits overview
 - Bonus point opportunities
+
+### Support Center
+- Comprehensive FAQ system with categorized questions and answers
+- Interactive contact form with validation and success/error states
+- Contact information with business hours and response times
+- Emergency contact information for travelers
+- Search and filter functionality for FAQ items
 
 ## Code Standards
 

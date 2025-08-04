@@ -1,4 +1,4 @@
-import { Trip, TravelGuide, Booking, User } from '../types';
+import { Trip, TravelGuide, Booking, User, FAQItem, ContactInfo } from '../types';
 
 export const mockTrips: Trip[] = [
   {
@@ -127,3 +127,62 @@ export const mockBookings: Booking[] = [
     specialRequests: 'Vegetarian meals preferred'
   }
 ];
+
+export const mockFAQs: FAQItem[] = [
+  {
+    id: 'faq-1',
+    question: 'How do I make a booking?',
+    answer: 'You can make a booking by browsing our trips, selecting your preferred destination, choosing your travel dates, and completing the booking process through our secure checkout.',
+    category: 'booking'
+  },
+  {
+    id: 'faq-2',
+    question: 'Can I cancel or modify my booking?',
+    answer: 'Yes, you can cancel or modify your booking up to 48 hours before your travel date. Cancellation fees may apply depending on the type of booking and timing.',
+    category: 'booking'
+  },
+  {
+    id: 'faq-3',
+    question: 'How do I earn and redeem points?',
+    answer: 'You earn points with every booking. Points can be redeemed for discounts on future trips. 100 points = $1 discount. Points expire after 2 years of inactivity.',
+    category: 'points'
+  },
+  {
+    id: 'faq-4',
+    question: 'What payment methods do you accept?',
+    answer: 'We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. All payments are processed securely.',
+    category: 'payment'
+  },
+  {
+    id: 'faq-5',
+    question: 'How do I access my travel guides?',
+    answer: 'Travel guides are available in the "Travel Guides" section. You can browse by destination or search for specific topics. Guides are free to access for all users.',
+    category: 'guides'
+  },
+  {
+    id: 'faq-6',
+    question: 'I\'m having trouble with the website. What should I do?',
+    answer: 'If you\'re experiencing technical issues, try clearing your browser cache, disabling ad blockers, or using a different browser. If problems persist, contact our support team.',
+    category: 'technical'
+  },
+  {
+    id: 'faq-7',
+    question: 'Do you offer travel insurance?',
+    answer: 'Yes, we offer comprehensive travel insurance options during the booking process. Insurance covers trip cancellation, medical emergencies, and lost luggage.',
+    category: 'general'
+  },
+  {
+    id: 'faq-8',
+    question: 'How do refunds work?',
+    answer: 'Refunds are processed according to our cancellation policy. Full refunds are available for cancellations made 7+ days before travel. Partial refunds apply for shorter notice periods.',
+    category: 'payment'
+  }
+];
+
+export const mockContactInfo: ContactInfo = {
+  email: 'support@travelapp.com',
+  phone: '+1 (555) 123-4567',
+  businessHours: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
+  responseTime: 'We typically respond within 24 hours',
+  alternativeContact: 'For urgent matters, you can also reach us via live chat during business hours'
+};
