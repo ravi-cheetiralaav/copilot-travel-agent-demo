@@ -7,7 +7,7 @@ export interface Trip {
   duration: number; // in days
   imageUrl: string;
   rating: number;
-  category: 'adventure' | 'relaxation' | 'cultural' | 'family' | 'luxury';
+  category: 'adventure' | 'relaxation' | 'cultural' | 'family' | 'luxury' | 'Food Exploration';
   availableDates: string[];
   included: string[];
 }

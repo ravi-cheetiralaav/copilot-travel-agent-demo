@@ -65,6 +65,97 @@ export const mockTrips: Trip[] = [
     category: 'luxury',
     availableDates: ['2024-03-01', '2024-04-05', '2024-11-15'],
     included: ['Flights', 'Overwater Villa', 'All Meals', 'Private Butler', 'Spa Credits']
+  },
+  {
+    id: '6',
+    title: 'New York City Explorer',
+    destination: 'New York, USA',
+    description: 'Discover the iconic sights, Broadway shows, and world-class dining in NYC.',
+    price: 1399,
+    duration: 6,
+    imageUrl: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=800',
+    rating: 4.5,
+    category: 'cultural',
+    availableDates: ['2024-05-10', '2024-06-15', '2024-09-01'],
+    included: ['Flights', 'Hotel', 'City Pass', 'Broadway Tickets']
+  },
+  {
+    id: '7',
+    title: 'Kenya Safari Adventure',
+    destination: 'Maasai Mara, Kenya',
+    description: 'Experience the thrill of African wildlife and stunning landscapes on safari.',
+    price: 1899,
+    duration: 7,
+    imageUrl: 'https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=800',
+    rating: 4.9,
+    category: 'adventure',
+    availableDates: ['2024-07-05', '2024-08-12', '2024-09-20'],
+    included: ['Flights', 'Safari Lodge', 'Game Drives', 'Cultural Tour']
+  },
+  {
+    id: '8',
+    title: 'Rome Historical Journey',
+    destination: 'Rome, Italy',
+    description: 'Walk through history with guided tours of ancient Roman sites and cuisine.',
+    price: 1099,
+    duration: 5,
+    imageUrl: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800',
+    rating: 4.7,
+    category: 'cultural',
+    availableDates: ['2024-03-18', '2024-04-25', '2024-10-10'],
+    included: ['Flights', 'Hotel', 'Guided Tours', 'Food Tasting']
+  },
+  {
+    id: '9',
+    title: 'Sydney Coastal Escape',
+    destination: 'Sydney, Australia',
+    description: 'Enjoy the beaches, harbor cruises, and vibrant city life of Sydney.',
+    price: 1499,
+    duration: 7,
+    imageUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800',
+    rating: 4.6,
+    category: 'relaxation',
+    availableDates: ['2024-02-15', '2024-03-30', '2024-12-05'],
+    included: ['Flights', 'Hotel', 'Harbor Cruise', 'Beach Activities']
+  },
+  {
+    id: '10',
+    title: 'Bangkok Foodie Tour',
+    destination: 'Bangkok, Thailand',
+    description: 'Explore the vibrant street food scene and culinary delights of Bangkok with guided tastings and cooking classes.',
+    price: 999,
+    duration: 5,
+    imageUrl: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800',
+    rating: 4.8,
+    category: 'Food Exploration',
+    availableDates: ['2024-05-05', '2024-06-10', '2024-09-15'],
+    included: ['Flights', 'Hotel', 'Street Food Tour', 'Cooking Class', 'Local Guide']
+  },
+  {
+    id: '8',
+    title: 'Rome Historical Journey',
+    destination: 'Rome, Italy',
+    description: 'Walk through history with guided tours of ancient Roman sites and cuisine.',
+    price: 1099,
+    duration: 5,
+    imageUrl: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800',
+    rating: 4.7,
+    category: 'cultural',
+    availableDates: ['2024-03-18', '2024-04-25', '2024-10-10'],
+    included: ['Flights', 'Hotel', 'Guided Tours', 'Food Tasting']
+  },
+  {
+    id: '9',
+    title: 'Sydney Coastal Escape',
+    destination: 'Sydney, Australia',
+    description: 'Enjoy the beaches, harbor cruises, and vibrant city life of Sydney.',
+    price: 1499,
+    duration: 7,
+    imageUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800',
+    rating: 4.6,
+    category: 'relaxation',
+    availableDates: ['2024-02-15', '2024-03-30', '2024-12-05'],
+    included: ['Flights', 'Hotel', 'Harbor Cruise', 'Beach Activities']
   }
 ];
 
