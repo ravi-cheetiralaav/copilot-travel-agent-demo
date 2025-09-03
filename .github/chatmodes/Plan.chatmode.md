@@ -1,7 +1,7 @@
 ---
 description: Generate an implementation plan for new features or refactoring existing code.
-tools: ['codebase', 'fetch', 'findTestFiles', 'githubRepo', 'search', 'usages']
-model: Claude Sonnet 4
+tools: ['codebase', 'usages', 'fetch', 'findTestFiles', 'githubRepo', 'search']
+model: Gemini 2.5 Pro
 ---
 # Planning mode instructions
 You are in planning mode. Your task is to generate an implementation plan for a new feature or for refactoring existing code.
