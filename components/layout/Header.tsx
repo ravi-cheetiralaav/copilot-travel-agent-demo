@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '../ui/Button';
+import ThemeSelector from '../ui/ThemeSelector';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,7 @@ export function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-theme-600 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">T</span>
             </div>
             <span className="text-xl font-bold text-gray-900">TravelApp</span>
@@ -21,25 +22,26 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-theme-600 transition-colors">
               Home
             </Link>
-            <Link href="/trips" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/trips" className="text-gray-700 hover:text-theme-600 transition-colors">
               Search Trips
             </Link>
-            <Link href="/guides" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/guides" className="text-gray-700 hover:text-theme-600 transition-colors">
               Travel Guides
             </Link>
-            <Link href="/bookings" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/bookings" className="text-gray-700 hover:text-theme-600 transition-colors">
               My Bookings
             </Link>
-            <Link href="/points" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/points" className="text-gray-700 hover:text-theme-600 transition-colors">
               Points
             </Link>
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA and Theme Selector */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeSelector />
             <Button variant="outline" size="sm">
               Sign In
             </Button>
@@ -69,21 +71,24 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/" className="text-gray-700 hover:text-theme-600 transition-colors">
                 Home
               </Link>
-              <Link href="/trips" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/trips" className="text-gray-700 hover:text-theme-600 transition-colors">
                 Search Trips
               </Link>
-              <Link href="/guides" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/guides" className="text-gray-700 hover:text-theme-600 transition-colors">
                 Travel Guides
               </Link>
-              <Link href="/bookings" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/bookings" className="text-gray-700 hover:text-theme-600 transition-colors">
                 My Bookings
               </Link>
-              <Link href="/points" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/points" className="text-gray-700 hover:text-theme-600 transition-colors">
                 Points
               </Link>
+              <div className="pt-4">
+                <ThemeSelector />
+              </div>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="outline" size="sm">
                   Sign In

@@ -10,7 +10,7 @@ export default async function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      <section className="relative bg-gradient-to-br from-theme-600 to-theme-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
@@ -23,12 +23,12 @@ export default async function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/trips">
-                <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100">
+                <Button size="lg" className="bg-white text-theme-600 hover:bg-gray-100">
                   Explore Trips
                 </Button>
               </Link>
               <Link href="/guides">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary-600">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-theme-600">
                   Travel Guides
                 </Button>
               </Link>
@@ -73,7 +73,7 @@ export default async function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-theme-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌍</span>
               </div>
               <h3 className="text-lg font-semibold mb-2">Curated Destinations</h3>
@@ -81,7 +81,7 @@ export default async function HomePage() {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-theme-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">📋</span>
               </div>
               <h3 className="text-lg font-semibold mb-2">Easy Booking</h3>
@@ -89,7 +89,7 @@ export default async function HomePage() {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-theme-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">📚</span>
               </div>
               <h3 className="text-lg font-semibold mb-2">Travel Guides</h3>
@@ -97,7 +97,7 @@ export default async function HomePage() {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-theme-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⭐</span>
               </div>
               <h3 className="text-lg font-semibold mb-2">Loyalty Points</h3>
@@ -108,7 +108,7 @@ export default async function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary-600 text-white">
+      <section className="py-16 bg-theme-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
           <p className="text-xl mb-8">
@@ -116,11 +116,11 @@ export default async function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/trips">
-              <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-theme-600 hover:bg-gray-100">
                 Browse Trips
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary-600">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-theme-600">
               Create Account
             </Button>
           </div>
