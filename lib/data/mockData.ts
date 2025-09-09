@@ -130,32 +130,6 @@ export const mockTrips: Trip[] = [
     category: 'Food Exploration',
     availableDates: ['2024-05-05', '2024-06-10', '2024-09-15'],
     included: ['Flights', 'Hotel', 'Street Food Tour', 'Cooking Class', 'Local Guide']
-  },
-  {
-    id: '8',
-    title: 'Rome Historical Journey',
-    destination: 'Rome, Italy',
-    description: 'Walk through history with guided tours of ancient Roman sites and cuisine.',
-    price: 1099,
-    duration: 5,
-    imageUrl: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800',
-    rating: 4.7,
-    category: 'cultural',
-    availableDates: ['2024-03-18', '2024-04-25', '2024-10-10'],
-    included: ['Flights', 'Hotel', 'Guided Tours', 'Food Tasting']
-  },
-  {
-    id: '9',
-    title: 'Sydney Coastal Escape',
-    destination: 'Sydney, Australia',
-    description: 'Enjoy the beaches, harbor cruises, and vibrant city life of Sydney.',
-    price: 1499,
-    duration: 7,
-    imageUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800',
-    rating: 4.6,
-    category: 'relaxation',
-    availableDates: ['2024-02-15', '2024-03-30', '2024-12-05'],
-    included: ['Flights', 'Hotel', 'Harbor Cruise', 'Beach Activities']
   }
 ];
 

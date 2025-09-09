@@ -22,7 +22,7 @@ export function SearchForm({ onSearch, loading = false }: SearchFormProps) {
   const handleInputChange = (field: keyof SearchFilters, value: string) => {
     setFilters(prev => ({
       ...prev,
-      [field]: value || undefined
+      [field]: field === 'rating' ? (value ? parseFloat(value) : undefined) : (value || undefined)
     }));
   };
 

@@ -43,6 +43,19 @@ describe('TripService', () => {
     it('filters trips by minimum rating', async () => {
       const trips = await TripService.searchTrips({ rating: 4.8 });
       expect(trips.every(trip => trip.rating >= 4.8)).toBe(true);
+      expect(trips).toHaveLength(5); // Tokyo Adventure (4.8), Swiss Alps Adventure (4.9), Maldives Luxury Escape (5.0), Kenya Safari Adventure (4.9), Bangkok Foodie Tour (4.8)
+    });
+
+    it('filters trips by rating 4.5+ correctly', async () => {
+      const trips = await TripService.searchTrips({ rating: 4.5 });
+      expect(trips.every(trip => trip.rating >= 4.5)).toBe(true);
+      expect(trips).toHaveLength(10); // All 10 trips have rating >= 4.5
+    });
+
+    it('filters trips by rating 4.9+ correctly', async () => {
+      const trips = await TripService.searchTrips({ rating: 4.9 });
+      expect(trips.every(trip => trip.rating >= 4.9)).toBe(true);
+      expect(trips).toHaveLength(3); // Swiss Alps Adventure (4.9), Kenya Safari Adventure (4.9), Maldives Luxury Escape (5.0)
     });
   });
 
