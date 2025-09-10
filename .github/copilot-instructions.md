@@ -1,5 +1,22 @@
 This is a Next.js-based travel application with TypeScript that helps users search for trips, manage bookings, view travel guides, and track points. The application uses React components, server components, and client components as part of the Next.js App Router architecture. Please follow these guidelines when contributing:
+## Test Frameworks
 
+This project uses **Jest** as the primary test framework for both unit and integration tests. React component tests utilize **React Testing Library** for rendering and interaction. Integration tests may also use **Jest** with custom setup as needed.
+
+**End-to-End & Browser Automation:**
+If browser automation or end-to-end testing is required, use **Playwright**. Playwright can be used for UI interaction, browser-based integration, and scenario testing. Place Playwright tests in a dedicated folder (e.g., `tests/playwright/`).
+
+Refer to Playwright documentation for setup and usage details.
+
+**Unit Tests:**
+- Located in `components/__tests__/` and other relevant folders
+- Use Jest and React Testing Library
+
+**Integration Tests:**
+- Located in `tests/` and other relevant folders
+- Use Jest (with custom setup if required)
+
+Refer to `jest.config.js` and `jest.setup.js` for configuration details.
 ## Code Standards
 
 ### Required Before Each Commit
