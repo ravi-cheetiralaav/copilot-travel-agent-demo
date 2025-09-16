@@ -1,4 +1,4 @@
-import { Trip, TravelGuide, Booking, User } from '../types';
+import { Trip, TravelGuide, Booking, User, FAQItem, ContactInfo } from '../types';
 
 export const mockTrips: Trip[] = [
   {
@@ -218,3 +218,105 @@ export const mockBookings: Booking[] = [
     specialRequests: 'Vegetarian meals preferred'
   }
 ];
+
+// FAQ Data
+export const mockFAQs: FAQItem[] = [
+  {
+    id: 'faq-1',
+    question: 'How do I book a trip?',
+    answer: 'To book a trip, browse our available destinations, select your preferred dates, choose the number of guests, and proceed to checkout. You can pay securely online using your credit card or PayPal.',
+    category: 'booking',
+    tags: ['booking', 'payment', 'process']
+  },
+  {
+    id: 'faq-2',
+    question: 'What is your cancellation policy?',
+    answer: 'We offer flexible cancellation policies depending on your membership level. Bronze members can cancel up to 48 hours before travel for a full refund, while Gold and Platinum members enjoy free cancellation up to 24 hours before travel.',
+    category: 'booking',
+    tags: ['cancellation', 'refund', 'policy']
+  },
+  {
+    id: 'faq-3',
+    question: 'How do I earn and use loyalty points?',
+    answer: 'You earn 10 points for every dollar spent on bookings. Points can be redeemed for discounts on future trips - every 100 points equals $1 in credit. Premium members earn bonus points on all purchases.',
+    category: 'account',
+    tags: ['points', 'loyalty', 'rewards', 'membership']
+  },
+  {
+    id: 'faq-4',
+    question: 'What documents do I need for international travel?',
+    answer: 'For international travel, you typically need a valid passport with at least 6 months remaining validity. Some destinations may require a visa - we provide destination-specific information in your booking confirmation.',
+    category: 'travel',
+    tags: ['documents', 'passport', 'visa', 'international']
+  },
+  {
+    id: 'faq-5',
+    question: 'How do I change my booking?',
+    answer: 'You can modify your booking by logging into your account and visiting the "My Bookings" section. Changes may incur fees depending on the type of modification and how close to your travel date.',
+    category: 'booking',
+    tags: ['changes', 'modification', 'booking']
+  },
+  {
+    id: 'faq-6',
+    question: 'What payment methods do you accept?',
+    answer: 'We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers. Payment is processed securely through encrypted connections.',
+    category: 'payment',
+    tags: ['payment', 'credit card', 'paypal', 'security']
+  },
+  {
+    id: 'faq-7',
+    question: 'Is travel insurance included?',
+    answer: 'Basic travel insurance is included with all bookings. This covers trip cancellation, medical emergencies, and lost luggage. Premium insurance options are available for additional coverage.',
+    category: 'travel',
+    tags: ['insurance', 'coverage', 'medical', 'protection']
+  },
+  {
+    id: 'faq-8',
+    question: 'Can I book for someone else?',
+    answer: 'Yes, you can book trips for family members or friends. You\'ll need to provide their details during the booking process. The primary booker is responsible for all booking terms and conditions.',
+    category: 'booking',
+    tags: ['booking', 'family', 'friends', 'guest']
+  },
+  {
+    id: 'faq-9',
+    question: 'How do I reset my password?',
+    answer: 'Click the "Forgot Password" link on the login page, enter your email address, and we\'ll send you instructions to reset your password. Make sure to check your spam folder if you don\'t see the email.',
+    category: 'account',
+    tags: ['password', 'account', 'login', 'security']
+  },
+  {
+    id: 'faq-10',
+    question: 'What happens if my flight is delayed?',
+    answer: 'If your flight is delayed due to weather or airline issues, contact us immediately. We\'ll help coordinate with hotels and activities to minimize disruption to your trip at no extra cost.',
+    category: 'travel',
+    tags: ['delays', 'flights', 'support', 'disruption']
+  }
+];
+
+// Contact Information
+export const mockContactInfo: ContactInfo = {
+  phone: '+1 (555) 123-TRAVEL',
+  email: 'support@travelapp.com',
+  address: {
+    street: '123 Adventure Avenue',
+    city: 'San Francisco',
+    state: 'CA',
+    zip: '94102',
+    country: 'United States'
+  },
+  hours: {
+    monday: '8:00 AM - 8:00 PM',
+    tuesday: '8:00 AM - 8:00 PM',
+    wednesday: '8:00 AM - 8:00 PM',
+    thursday: '8:00 AM - 8:00 PM',
+    friday: '8:00 AM - 8:00 PM',
+    saturday: '9:00 AM - 6:00 PM',
+    sunday: '10:00 AM - 4:00 PM'
+  },
+  socialMedia: {
+    facebook: 'https://facebook.com/travelapp',
+    twitter: 'https://twitter.com/travelapp',
+    instagram: 'https://instagram.com/travelapp',
+    linkedin: 'https://linkedin.com/company/travelapp'
+  }
+};
