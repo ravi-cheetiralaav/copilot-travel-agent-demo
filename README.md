@@ -23,28 +23,62 @@ A comprehensive travel application built with Next.js, TypeScript, and Tailwind 
 
 ### Prerequisites
 
-- Node.js 18+ 
-- npm or yarn package manager
+- Node.js 18.x or later (LTS recommended). On Windows we recommend using **nvm-windows** to manage Node versions: https://github.com/coreybutler/nvm-windows
+- npm (bundled with Node) or `yarn` if you prefer
+- Git (for cloning)
+- Optional: Docker & Docker Compose if you prefer containerized development
 
-### Installation
+### Installation (Windows PowerShell)
 
-1. Clone the repository:
-```bash
+1. Clone the repository and enter the project directory:
+
+```powershell
 git clone <repository-url>
-cd copilot-agent-demo
+Set-Location -Path copilot-agent-demo
 ```
 
-2. Install dependencies:
-```bash
+2. Install Node (if not already installed)
+
+Using `nvm-windows` (recommended):
+
+```powershell
+# Install nvm-windows from https://github.com/coreybutler/nvm-windows/releases
+# Then install and use Node 18 (example):
+nvm install 18.20.0
+nvm use 18.20.0
+```
+
+3. Install dependencies:
+
+```powershell
 npm install
+# or
+ yarn install
 ```
 
-3. Start the development server:
-```bash
+4. Start the development server (PowerShell):
+
+```powershell
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open the app in your browser: `http://localhost:3000`
+
+### Optional: Docker (Windows)
+
+If you prefer running the app with Docker Compose (development profile mounts the source for hot reload):
+
+```powershell
+# Development (hot-reload) - uses the `dev` profile
+docker-compose --profile dev up --build travel-app-dev
+
+# Production-like build
+docker-compose up --build
+```
+
+Notes:
+- When using Docker on Windows, ensure file sharing / volume mounts are enabled and your Docker resources (CPU/RAM) are sufficient for a Next.js dev server.
+- The repository provides `Dockerfile` and `Dockerfile.dev` for production and development images respectively.
 
 ## Docker Support
 
