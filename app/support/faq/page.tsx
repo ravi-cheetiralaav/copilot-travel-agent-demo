@@ -121,7 +121,7 @@ export default function FAQPage() {
         {/* Contact Section */}
         <div className="mt-12 bg-primary-50 rounded-lg p-8 text-center">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
-            Didn't find what you're looking for?
+            Didn&apos;t find what you&apos;re looking for?
           </h2>
           <p className="text-gray-600 mb-6">
             Our support team is here to help. Contact us for personalized assistance.

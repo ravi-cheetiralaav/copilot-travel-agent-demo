@@ -44,7 +44,7 @@ export default function SupportPage() {
               Contact Us
             </h3>
             <p className="text-gray-600 mb-6">
-              Have a specific question? Send us a message and we'll get back to you as soon as possible.
+              Have a specific question? Send us a message and we&apos;ll get back to you as soon as possible.
             </p>
             <Link href="/support/contact">
               <Button className="w-full">
