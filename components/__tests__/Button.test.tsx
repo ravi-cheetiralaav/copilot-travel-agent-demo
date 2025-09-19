@@ -7,7 +7,7 @@ describe('Button Component', () => {
     render(<Button>Click me</Button>);
     const button = screen.getByRole('button', { name: /click me/i });
     expect(button).toBeInTheDocument();
-    expect(button).toHaveClass('bg-primary-600');
+    expect(button).toHaveClass('bg-theme-primary-600');
   });
 
   it('renders button with outline variant', () => {
