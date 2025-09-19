@@ -59,3 +59,42 @@ export interface SearchFilters {
   };
   rating?: number;
 }
+
+export interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: 'booking' | 'payment' | 'travel' | 'account' | 'general';
+  isPopular?: boolean;
+}
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  category: 'general' | 'booking' | 'payment' | 'technical' | 'complaint';
+  message: string;
+}
+
+export interface ContactInfo {
+  email: string;
+  phone: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    country: string;
+    zipCode: string;
+  };
+  officeHours: {
+    weekdays: string;
+    weekends: string;
+    timezone: string;
+  };
+  socialMedia: {
+    facebook?: string;
+    twitter?: string;
+    instagram?: string;
+    linkedin?: string;
+  };
+}
