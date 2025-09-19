@@ -59,3 +59,26 @@ export interface SearchFilters {
   };
   rating?: number;
 }
+
+export interface FAQItem {
+  id: string;
+  question: string;
+  answer: string;
+  category: 'booking' | 'technical' | 'general' | 'payment' | 'points' | 'guides';
+}
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  category: 'booking' | 'technical' | 'general' | 'feedback';
+  subject: string;
+  message: string;
+}
+
+export interface ContactInfo {
+  email: string;
+  phone?: string;
+  businessHours: string;
+  responseTime: string;
+  alternativeContact?: string;
+}
