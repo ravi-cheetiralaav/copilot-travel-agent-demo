@@ -36,6 +36,9 @@ export function Header() {
             <Link href="/points" className="text-gray-700 hover:text-primary-600 transition-colors">
               Points
             </Link>
+            <Link href="/support" className="text-gray-700 hover:text-primary-600 transition-colors">
+              Support
+            </Link>
           </nav>
 
           {/* Desktop CTA */}
@@ -83,6 +86,9 @@ export function Header() {
               </Link>
               <Link href="/points" className="text-gray-700 hover:text-primary-600 transition-colors">
                 Points
+              </Link>
+              <Link href="/support" className="text-gray-700 hover:text-primary-600 transition-colors">
+                Support
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="outline" size="sm">
