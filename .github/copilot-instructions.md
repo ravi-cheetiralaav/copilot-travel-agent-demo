@@ -92,58 +92,52 @@ This project uses **Jest** as the primary test framework for both unit and integ
 If browser automation or end-to-end testing is required, use **Playwright**. Playwright can be used for UI interaction, browser-based integration, and scenario testing. Place Playwright tests in a dedicated folder (e.g., `tests/playwright/`).
 
 Refer to Playwright documentation for setup and usage details.
+```md
+# TravelApp — Copilot / AI Agent Instructions (concise)
 
-**Unit Tests:**
-- Located in `components/__tests__/` and other relevant folders
-- Use Jest and React Testing Library
+This file gives an AI coding agent the minimal, actionable knowledge to be productive in this Next.js 14 + TypeScript + Tailwind demo.
 
-**Integration Tests:**
-- Located in `tests/` and other relevant folders
-- Use Jest (with custom setup if required)
+Key files & entry points
+- App Router pages: `app/layout.tsx`, `app/page.tsx`, `app/*/page.tsx`
+- UI components: `components/ui/*` (Button, Input, Select)
+- Layout: `components/layout/Header.tsx`, `components/layout/Footer.tsx`
+- Services & data: `lib/services/index.ts`, `lib/data/mockData.ts`, `lib/types/index.ts`
 
-Refer to `jest.config.js` and `jest.setup.js` for configuration details.
-## Code Standards
+Architecture & patterns (what to follow)
+- Service layer: use `lib/services/index.ts` static methods to read/modify arrays from `lib/data/mockData.ts`. No external API calls by default.
+- App Router: files in `app/` are Server Components by default — add `'use client'` only for components that use hooks or browser APIs (see `components/layout/Header.tsx`).
+- UI primitives: use components in `components/ui/` and the `cn()` helper in `lib/utils.ts` for conditional classes.
 
-### Required Before Each Commit
-- Run `npm run lint` to ensure code follows project standards
-- Make sure all components follow Next.js App Router patterns
-- Client components should be marked with 'use client' when they use browser APIs or React hooks
-- When adding new functionality, make sure you update the README
-- Make sure that the repository structure documentation is correct and accurate in the Copilot Instructions file
-- Ensure all tests pass by running `npm run test` in the terminal
+Styling & theming
+- Tailwind tokens live in `tailwind.config.js` (primary, secondary palettes). Use `bg-primary-600`, `text-primary-600` patterns.
+- Small custom CSS lives in `app/globals.css`. Prefer Tailwind; add CSS variables only when necessary.
 
-### TypeScript and React Patterns
-- Use TypeScript interfaces/types for all props and data structures
-- Follow React best practices (hooks, functional components)
-- Use proper state management techniques
-- Components should be modular and follow single-responsibility principle
+Developer workflows & helpful commands
+- Install & run: `npm install` then `npm run dev` (PowerShell: use `npm run dev`).
+- Build: `npm run build`; Start prod server: `npm run start`.
+- Lint: `npm run lint` (run before commits). Tests: `npm run test` (Jest + React Testing Library).
+- Docker: `docker-compose --profile dev up --build travel-app-dev` (development with mounts).
 
-### Styling
-- You must prioritize using Tailwind CSS classes as much as possible. If needed, you may define custom Tailwind Classes / Styles. Creating custom CSS should be the last approach.
+Project-specific conventions
+- Types: add shared types in `lib/types/index.ts` before changing mock data or services.
+- Mock data: update arrays in `lib/data/mockData.ts` when adding sample content.
+- Service IDs: Booking IDs are generated using timestamps (pattern `booking-${Date.now()}`) — keep consistent.
+- Tests: unit tests for services are in `tests/` and component tests in `components/__tests__/`.
 
-## Development Flow
-- Install dependencies: `npm install`
-- Development server: `npm run dev`
-- Build: `npm run build`
-- Test: `npm run test`
-- Lint: `npm run lint`
+Edge cases agents should handle
+- Server vs client: moving logic requiring `window` into a client component.
+- Mock data mutations: services operate on in-memory arrays — persist changes only for integration testing or add an adapter.
+- Theme & styling: prefer new Tailwind tokens to broad CSS overrides; follow `tailwind.config.js` palette.
 
-## Repository Structure
-- `app/`: Next.js App Router pages and layouts organized by route
-- `components/`: Reusable React components
-  - `components/ui/`: UI components (buttons, inputs, etc.)
-  - `components/__tests__/`: Component tests
-- `lib/`: Core logic and services
-  - `lib/data/`: Data models and mock data
-  - `lib/types/`: TypeScript type definitions
-- `public/`: Static assets
-- `tests/`: Test files and test utilities
-- `README.md`: Project documentation
+Where to change things (examples)
+- Add a new trip category: update `lib/types/index.ts` → add mock entries in `lib/data/mockData.ts` → update `TripService.searchTrips()` filter logic in `lib/services/index.ts` → add tests in `tests/services.test.ts`.
+- Add client interactivity: create a component in `components/ui/`, mark with `'use client'`, then import into Server pages.
 
-## Key Guidelines
-1. Make sure to evaluate the components you're creating, and whether they need 'use client'
-2. Images should contain meaningful alt text unless they are purely for decoration. If they are for decoration only, a null (empty) alt text should be provided (alt="") so that the images are ignored by the screen reader.
-3. Follow Next.js best practices for data fetching, routing, and rendering
-4. Use proper error handling and loading states
-5. Optimize components and pages for performance
-6. Custom Info : https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions,https://code.visualstudio.com/docs/copilot/copilot-customization#_reusable-prompt-files-experimental
+If uncertain, inspect these files first: `app/layout.tsx`, `lib/services/index.ts`, `lib/data/mockData.ts`, `tailwind.config.js`, and `jest.config.js`.
+
+Questions or missing info
+- If you need runtime envs, check `.env.local` (not committed) — this project uses mock data so envs are minimal.
+- Ask the repo owner if you should replace mocks with real API adapters; otherwise, work in the service layer.
+
+End of instructions — ask for feedback to clarify any missing conventions.
+```
