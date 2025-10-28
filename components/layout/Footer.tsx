@@ -1,14 +1,16 @@
 import Link from 'next/link';
+import { Button } from '../ui/Button';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
+            <div className="flex items-center space-x-2 mb-4 group">
+              <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
                 <span className="text-white font-bold text-lg">T</span>
               </div>
               <span className="text-xl font-bold">TravelApp</span>
@@ -20,25 +22,25 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-semibold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/trips" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/trips" className="text-gray-400 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block">
                   Search Trips
                 </Link>
               </li>
               <li>
-                <Link href="/guides" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/guides" className="text-gray-400 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block">
                   Travel Guides
                 </Link>
               </li>
               <li>
-                <Link href="/bookings" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/bookings" className="text-gray-400 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block">
                   My Bookings
                 </Link>
               </li>
               <li>
-                <Link href="/points" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/points" className="text-gray-400 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block">
                   Loyalty Points
                 </Link>
               </li>
@@ -47,25 +49,25 @@ export function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold mb-4">Support</h3>
+            <h3 className="font-semibold mb-4 text-white">Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/help" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/help" className="text-gray-400 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block">
                   Help Center
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/contact" className="text-gray-400 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/terms" className="text-gray-400 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/privacy" className="text-gray-400 hover:text-primary-400 transition-all duration-200 hover:translate-x-1 inline-block">
                   Privacy Policy
                 </Link>
               </li>
@@ -74,7 +76,7 @@ export function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-semibold mb-4">Stay Updated</h3>
+            <h3 className="font-semibold mb-4 text-white">Stay Updated</h3>
             <p className="text-gray-400 text-sm mb-4">
               Get the latest travel deals and destination guides.
             </p>
@@ -82,16 +84,16 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="px-3 py-2 glass-dark rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 transition-all placeholder-gray-400 text-white"
               />
-              <button className="px-3 py-2 bg-primary-600 hover:bg-primary-700 rounded-md text-sm font-medium transition-colors">
+              <Button variant="glass-primary" size="sm" className="w-full">
                 Subscribe
-              </button>
+              </Button>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-400">
           <p>&copy; 2024 TravelApp. All rights reserved.</p>
         </div>
       </div>
