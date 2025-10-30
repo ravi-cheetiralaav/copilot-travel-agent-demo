@@ -2,6 +2,32 @@
 
 A comprehensive travel application built with Next.js, TypeScript, and Tailwind CSS that helps users search for trips, manage bookings, view travel guides, and track loyalty points.
 
+## 🚀 Deployment Options
+
+### Deploy to Azure App Service (Recommended)
+
+Deploy this application to Azure App Service with Terraform in just a few minutes:
+
+```bash
+cd terraform
+terraform init
+terraform apply
+```
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions and [terraform/QUICKSTART.md](terraform/QUICKSTART.md) for a 5-minute guide.
+
+**Features**:
+- ✅ Automated infrastructure provisioning
+- ✅ Docker container deployment
+- ✅ Application Insights monitoring
+- ✅ HTTPS with optional custom domains
+- ✅ Blue-green deployment support (staging slots)
+- ✅ Production-ready configuration
+
+### Run Locally
+
+For local development, see the "Getting Started" section below.
+
 ## Features
 
 - **Trip Search & Booking**: Browse and search for curated travel experiences with advanced filtering

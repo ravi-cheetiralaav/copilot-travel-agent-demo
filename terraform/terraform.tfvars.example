@@ -1,0 +1,61 @@
+# Example Terraform variables file
+# Copy this file to terraform.tfvars and customize for your deployment
+# WARNING: Do not commit terraform.tfvars to version control (it's in .gitignore)
+
+# REQUIRED: Must be globally unique across Azure
+app_service_name = "travel-app-unique-12345"
+
+# Azure region
+location = "eastus"
+
+# Resource names
+resource_group_name           = "travel-app-rg"
+app_service_plan_name         = "travel-app-plan"
+application_insights_name     = "travel-app-insights"
+log_analytics_workspace_name  = "travel-app-logs"
+
+# App Service Plan SKU
+# Options: B1, B2, B3 (Basic), S1, S2, S3 (Standard), P1v2, P2v3, P3v3 (Premium)
+app_service_plan_sku = "B1"
+
+# Always On (requires Basic tier or higher)
+always_on = true
+
+# Docker configuration
+docker_image_name   = "ghcr.io/ravi-cheetiralaav/copilot-travel-agent-demo:main"
+docker_registry_url = "https://ghcr.io"
+
+# Optional: Enable staging slot for blue-green deployments
+enable_staging_slot = false
+
+# Optional: Enable System Assigned Managed Identity
+enable_managed_identity = true
+
+# Optional: Custom domain configuration
+# Uncomment and set these if you want to use a custom domain
+# custom_domain_name         = "www.example.com"
+# enable_managed_certificate = true
+
+# Optional: CORS configuration
+# enable_cors = true
+# cors_allowed_origins = ["https://example.com", "https://www.example.com"]
+
+# Log retention (days)
+log_retention_days = 30
+
+# Tags for all resources
+tags = {
+  Environment = "production"
+  ManagedBy   = "Terraform"
+  Application = "TravelApp"
+  Team        = "DevOps"
+  CostCenter  = "Engineering"
+}
+
+# Optional: Additional app settings
+# Add any custom environment variables your application needs
+additional_app_settings = {
+  # Example custom settings:
+  # "API_KEY"           = "your-api-key"
+  # "FEATURE_FLAG_XYZ" = "true"
+}
