@@ -1,4 +1,4 @@
-import { Trip, TravelGuide, Booking, User } from '../types';
+import { Trip, TravelGuide, Booking, User, FAQ } from '../types';
 
 export const mockTrips: Trip[] = [
   {
@@ -216,5 +216,92 @@ export const mockBookings: Booking[] = [
     totalPrice: 2598,
     status: 'confirmed',
     specialRequests: 'Vegetarian meals preferred'
+  }
+];
+
+export const mockFAQs: FAQ[] = [
+  {
+    id: '1',
+    question: 'How do I cancel my booking?',
+    answer: 'You can cancel your booking up to 48 hours before departure through your booking management page. Cancellation fees may apply depending on the timing and trip type.',
+    category: 'booking',
+    tags: ['cancel', 'booking', 'refund', 'policy']
+  },
+  {
+    id: '2',
+    question: 'What payment methods do you accept?',
+    answer: 'We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers. Payment is processed securely through our encrypted payment system.',
+    category: 'payment',
+    tags: ['payment', 'credit card', 'paypal', 'security']
+  },
+  {
+    id: '3',
+    question: 'Do I need travel insurance?',
+    answer: 'While travel insurance is not mandatory, we highly recommend it. We offer comprehensive travel insurance options that cover medical emergencies, trip cancellation, and lost luggage.',
+    category: 'travel',
+    tags: ['insurance', 'coverage', 'medical', 'protection']
+  },
+  {
+    id: '4',
+    question: 'How do I earn loyalty points?',
+    answer: 'You earn 10% of your booking value in loyalty points. Points can be redeemed for discounts on future bookings. Premium members earn bonus points.',
+    category: 'account',
+    tags: ['points', 'loyalty', 'rewards', 'membership']
+  },
+  {
+    id: '5',
+    question: 'Can I modify my booking after confirmation?',
+    answer: 'Yes, you can modify your booking subject to availability and any applicable change fees. Contact our support team for assistance with modifications.',
+    category: 'booking',
+    tags: ['modify', 'change', 'booking', 'fees']
+  },
+  {
+    id: '6',
+    question: 'What happens if my flight is delayed?',
+    answer: 'If your flight is delayed, please contact our 24/7 support team immediately. We will help you reschedule activities and provide necessary accommodations.',
+    category: 'travel',
+    tags: ['delay', 'flight', 'support', 'reschedule']
+  },
+  {
+    id: '7',
+    question: 'Is there a mobile app available?',
+    answer: 'Yes, our mobile app is available for both iOS and Android. You can manage bookings, access travel documents, and get real-time updates on your trips.',
+    category: 'general',
+    tags: ['app', 'mobile', 'documents', 'updates']
+  },
+  {
+    id: '8',
+    question: 'What is included in the trip price?',
+    answer: 'Trip prices typically include flights, accommodation, and selected activities as listed in the trip details. Meals, additional activities, and personal expenses are usually extra unless specified.',
+    category: 'booking',
+    tags: ['price', 'included', 'flights', 'accommodation']
+  },
+  {
+    id: '9',
+    question: 'How secure is my personal information?',
+    answer: 'We take data security seriously and use industry-standard encryption to protect your personal information. We comply with GDPR and other privacy regulations.',
+    category: 'general',
+    tags: ['security', 'privacy', 'data', 'protection']
+  },
+  {
+    id: '10',
+    question: 'Can I book for a group?',
+    answer: 'Yes, we offer special group rates for bookings of 8 or more people. Contact our group booking specialists for customized packages and special rates.',
+    category: 'booking',
+    tags: ['group', 'rates', 'customized', 'special']
+  },
+  {
+    id: '11',
+    question: 'What if I need special dietary accommodations?',
+    answer: 'We can accommodate most dietary requirements including vegetarian, vegan, gluten-free, and religious dietary needs. Please specify your requirements when booking.',
+    category: 'travel',
+    tags: ['dietary', 'vegetarian', 'vegan', 'requirements']
+  },
+  {
+    id: '12',
+    question: 'How do I contact customer support?',
+    answer: 'Our customer support is available 24/7 via live chat, email, or phone. You can also submit a request through your account dashboard for non-urgent matters.',
+    category: 'general',
+    tags: ['support', 'contact', 'chat', 'phone']
   }
 ];
