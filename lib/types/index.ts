@@ -59,3 +59,32 @@ export interface SearchFilters {
   };
   rating?: number;
 }
+
+export interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: 'general' | 'booking' | 'payment' | 'travel' | 'account';
+  tags: string[];
+  helpful: number;
+  orderIndex: number;
+}
+
+export interface ContactForm {
+  name: string;
+  email: string;
+  subject: string;
+  category: 'general' | 'booking' | 'technical' | 'feedback' | 'complaint';
+  message: string;
+  urgent: boolean;
+}
+
+export interface ContactInfo {
+  id: string;
+  type: 'phone' | 'email' | 'address' | 'hours';
+  label: string;
+  value: string;
+  description?: string;
+  isPrimary: boolean;
+  orderIndex: number;
+}
