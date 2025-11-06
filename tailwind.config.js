@@ -22,6 +22,21 @@ module.exports = {
           600: '#16a34a',
           700: '#15803d',
         },
+        // Orange theme colors
+        'theme-primary': {
+          50: 'var(--theme-primary-50)',
+          100: 'var(--theme-primary-100)',
+          500: 'var(--theme-primary-500)',
+          600: 'var(--theme-primary-600)',
+          700: 'var(--theme-primary-700)',
+        },
+        'theme-secondary': {
+          50: 'var(--theme-secondary-50)',
+          100: 'var(--theme-secondary-100)',
+          500: 'var(--theme-secondary-500)',
+          600: 'var(--theme-secondary-600)',
+          700: 'var(--theme-secondary-700)',
+        },
       },
     },
   },

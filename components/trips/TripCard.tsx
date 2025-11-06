@@ -11,7 +11,7 @@ interface TripCardProps {
 
 export function TripCard({ trip }: TripCardProps) {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+    <Card className="overflow-hidden hover:shadow-lg transition-shadow theme-transition">
       <div className="relative h-48">
         <Image
           src={trip.imageUrl}
@@ -22,7 +22,7 @@ export function TripCard({ trip }: TripCardProps) {
         <div className="absolute top-4 right-4 bg-white px-2 py-1 rounded-full text-sm font-medium">
           ⭐ {trip.rating}
         </div>
-        <div className="absolute top-4 left-4 bg-primary-600 text-white px-2 py-1 rounded-full text-xs font-medium capitalize">
+        <div className="absolute top-4 left-4 bg-theme-primary-600 text-white px-2 py-1 rounded-full text-xs font-medium capitalize theme-transition">
           {trip.category}
         </div>
       </div>
@@ -34,7 +34,7 @@ export function TripCard({ trip }: TripCardProps) {
         
         <div className="flex justify-between items-center text-sm text-gray-600 mb-4">
           <span>{trip.duration} days</span>
-          <span className="font-semibold text-lg text-primary-600">
+          <span className="font-semibold text-lg text-theme-primary-600 theme-transition">
             {formatPrice(trip.price)}
           </span>
         </div>
@@ -46,7 +46,7 @@ export function TripCard({ trip }: TripCardProps) {
               <li key={index}>{item}</li>
             ))}
             {trip.included.length > 3 && (
-              <li className="text-primary-600">+ {trip.included.length - 3} more</li>
+              <li className="text-theme-primary-600 theme-transition">+ {trip.included.length - 3} more</li>
             )}
           </ul>
         </div>
