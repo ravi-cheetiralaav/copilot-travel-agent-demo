@@ -59,3 +59,46 @@ export interface SearchFilters {
   };
   rating?: number;
 }
+
+// Support related types
+export interface FAQ {
+  id: string;
+  question: string;
+  answer: string;
+  category: FAQCategory;
+  isPopular?: boolean;
+}
+
+export type FAQCategory = 'general' | 'bookings' | 'payments' | 'travel' | 'account';
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  category: ContactCategory;
+  message: string;
+  urgency?: 'low' | 'medium' | 'high';
+}
+
+export type ContactCategory = 'general' | 'booking_issue' | 'payment' | 'technical' | 'feedback' | 'complaint';
+
+export interface ContactInfo {
+  phone: string;
+  email: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zipCode: string;
+    country: string;
+  };
+  businessHours: {
+    [key: string]: string;
+  };
+  socialMedia: {
+    facebook?: string;
+    twitter?: string;
+    instagram?: string;
+    linkedin?: string;
+  };
+}
