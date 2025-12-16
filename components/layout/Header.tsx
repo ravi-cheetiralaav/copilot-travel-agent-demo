@@ -3,47 +3,92 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '../ui/Button';
+import { XmasThemeToggle } from '../ui/XmasThemeToggle';
+import { useXmasTheme } from '@/lib/contexts/XmasThemeContext';
+import { cn } from '@/lib/utils';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isXmasTheme } = useXmasTheme();
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
+    <header className={cn(
+      'shadow-sm border-b',
+      isXmasTheme 
+        ? 'bg-xmas-red-700 border-xmas-red-600' 
+        : 'bg-white border-gray-200'
+    )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">T</span>
+            <div className={cn(
+              'w-8 h-8 rounded-full flex items-center justify-center',
+              isXmasTheme ? 'bg-xmas-gold-600' : 'bg-primary-600'
+            )}>
+              <span className="text-white font-bold text-lg">
+                {isXmasTheme ? '🎅' : 'T'}
+              </span>
             </div>
-            <span className="text-xl font-bold text-gray-900">TravelApp</span>
+            <span className={cn(
+              'text-xl font-bold',
+              isXmasTheme ? 'text-white' : 'text-gray-900'
+            )}>
+              TravelApp
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/" className={cn(
+              'transition-colors',
+              isXmasTheme 
+                ? 'text-white hover:text-xmas-gold-200' 
+                : 'text-gray-700 hover:text-primary-600'
+            )}>
               Home
             </Link>
-            <Link href="/trips" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/trips" className={cn(
+              'transition-colors',
+              isXmasTheme 
+                ? 'text-white hover:text-xmas-gold-200' 
+                : 'text-gray-700 hover:text-primary-600'
+            )}>
               Search Trips
             </Link>
-            <Link href="/guides" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/guides" className={cn(
+              'transition-colors',
+              isXmasTheme 
+                ? 'text-white hover:text-xmas-gold-200' 
+                : 'text-gray-700 hover:text-primary-600'
+            )}>
               Travel Guides
             </Link>
-            <Link href="/bookings" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/bookings" className={cn(
+              'transition-colors',
+              isXmasTheme 
+                ? 'text-white hover:text-xmas-gold-200' 
+                : 'text-gray-700 hover:text-primary-600'
+            )}>
               My Bookings
             </Link>
-            <Link href="/points" className="text-gray-700 hover:text-primary-600 transition-colors">
+            <Link href="/points" className={cn(
+              'transition-colors',
+              isXmasTheme 
+                ? 'text-white hover:text-xmas-gold-200' 
+                : 'text-gray-700 hover:text-primary-600'
+            )}>
               Points
             </Link>
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <XmasThemeToggle />
+            <Button variant="outline" size="sm" useXmasTheme={isXmasTheme}>
               Sign In
             </Button>
-            <Button size="sm">
+            <Button size="sm" useXmasTheme={isXmasTheme}>
               Sign Up
             </Button>
           </div>
@@ -51,7 +96,12 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100"
+            className={cn(
+              'md:hidden p-2 rounded-md transition-colors',
+              isXmasTheme
+                ? 'text-white hover:text-xmas-gold-200 hover:bg-xmas-red-600'
+                : 'text-gray-400 hover:text-gray-500 hover:bg-gray-100'
+            )}
             aria-label="Toggle menu"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -67,28 +117,57 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className={cn(
+            'md:hidden py-4 border-t',
+            isXmasTheme ? 'border-xmas-red-600' : 'border-gray-200'
+          )}>
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/" className={cn(
+                'transition-colors',
+                isXmasTheme 
+                  ? 'text-white hover:text-xmas-gold-200' 
+                  : 'text-gray-700 hover:text-primary-600'
+              )}>
                 Home
               </Link>
-              <Link href="/trips" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/trips" className={cn(
+                'transition-colors',
+                isXmasTheme 
+                  ? 'text-white hover:text-xmas-gold-200' 
+                  : 'text-gray-700 hover:text-primary-600'
+              )}>
                 Search Trips
               </Link>
-              <Link href="/guides" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/guides" className={cn(
+                'transition-colors',
+                isXmasTheme 
+                  ? 'text-white hover:text-xmas-gold-200' 
+                  : 'text-gray-700 hover:text-primary-600'
+              )}>
                 Travel Guides
               </Link>
-              <Link href="/bookings" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/bookings" className={cn(
+                'transition-colors',
+                isXmasTheme 
+                  ? 'text-white hover:text-xmas-gold-200' 
+                  : 'text-gray-700 hover:text-primary-600'
+              )}>
                 My Bookings
               </Link>
-              <Link href="/points" className="text-gray-700 hover:text-primary-600 transition-colors">
+              <Link href="/points" className={cn(
+                'transition-colors',
+                isXmasTheme 
+                  ? 'text-white hover:text-xmas-gold-200' 
+                  : 'text-gray-700 hover:text-primary-600'
+              )}>
                 Points
               </Link>
               <div className="flex flex-col space-y-2 pt-4">
-                <Button variant="outline" size="sm">
+                <XmasThemeToggle />
+                <Button variant="outline" size="sm" useXmasTheme={isXmasTheme}>
                   Sign In
                 </Button>
-                <Button size="sm">
+                <Button size="sm" useXmasTheme={isXmasTheme}>
                   Sign Up
                 </Button>
               </div>
