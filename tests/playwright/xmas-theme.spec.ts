@@ -2,8 +2,8 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Christmas Theme Toggle', () => {
   test.beforeEach(async ({ page }) => {
-    // Navigate to the home page
-    await page.goto('http://localhost:3000');
+    // Navigate to the home page using relative URL
+    await page.goto('/');
   });
 
   test('should display the Christmas theme toggle button', async ({ page }) => {

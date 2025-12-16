@@ -14,16 +14,29 @@ export function XmasThemeProvider({ children }: { children: ReactNode }) {
 
   // Load theme preference from localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem('xmasTheme');
-    if (saved === 'true') {
-      setIsXmasTheme(true);
+    // Check if we're in a browser environment
+    if (typeof window !== 'undefined') {
+      try {
+        const saved = localStorage.getItem('xmasTheme');
+        if (saved === 'true') {
+          setIsXmasTheme(true);
+        }
+      } catch (error) {
+        console.error('Failed to load theme preference:', error);
+      }
     }
   }, []);
 
   const toggleXmasTheme = () => {
     setIsXmasTheme((prev) => {
       const newValue = !prev;
-      localStorage.setItem('xmasTheme', String(newValue));
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.setItem('xmasTheme', String(newValue));
+        } catch (error) {
+          console.error('Failed to save theme preference:', error);
+        }
+      }
       return newValue;
     });
   };
