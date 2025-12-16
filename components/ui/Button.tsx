@@ -4,15 +4,20 @@ import { cn } from '@/lib/utils';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'default' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
+  useXmasTheme?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'default', size = 'md', ...props }, ref) => {
+  ({ className, variant = 'default', size = 'md', useXmasTheme = false, ...props }, ref) => {
     const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50';
     
     const variants = {
-      default: 'bg-primary-600 text-white hover:bg-primary-700 focus-visible:ring-primary-500',
-      secondary: 'bg-secondary-600 text-white hover:bg-secondary-700 focus-visible:ring-secondary-500',
+      default: useXmasTheme 
+        ? 'bg-xmas-red-600 text-white hover:bg-xmas-red-700 focus-visible:ring-xmas-red-500'
+        : 'bg-primary-600 text-white hover:bg-primary-700 focus-visible:ring-primary-500',
+      secondary: useXmasTheme
+        ? 'bg-xmas-green-600 text-white hover:bg-xmas-green-700 focus-visible:ring-xmas-green-500'
+        : 'bg-secondary-600 text-white hover:bg-secondary-700 focus-visible:ring-secondary-500',
       outline: 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus-visible:ring-gray-500',
       ghost: 'text-gray-700 hover:bg-gray-100 focus-visible:ring-gray-500',
     };
